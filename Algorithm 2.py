@@ -7,7 +7,7 @@ def primes_in_range(start, end):
         for i in range(2, int(num ** 0.5) + 1):  # Check divisors up to sqrt(num)
             if num % i == 0:
                 is_prime = False
-                break
+                break 
         if is_prime:
             primes.append(num)
     return primes
@@ -49,4 +49,4 @@ def fibonacci(n):
     return sequence
 terms = int(input("enter the number of fibonacci terms: "))
 print(f"fibonacci sequence ({terms} terms):", fibonacci(terms))
-  
+
