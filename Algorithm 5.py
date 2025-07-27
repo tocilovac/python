@@ -127,7 +127,7 @@ def signup(advisor):
     c = conn.cursor()
     try:
         c.execute("INSERT INTO users (name, email, salt, hashed_password) VALUES (?, ?, ?, ?)",
-                  (name, email, salt, hashed))
+                 (name, email, salt, hashed))
         conn.commit()
         print(Fore.GREEN + "✅ Signup successful!")
     except sqlite3.IntegrityError:
@@ -181,3 +181,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
