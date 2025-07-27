@@ -9,7 +9,7 @@ print("Signup successful!")
 print("Username:", username)
 print("Password:", password) 
 
-
+##
 def signup():
     username = input("enter a username:").strip()
     
@@ -25,7 +25,7 @@ print("signup successful")
 print("username:", username)
 print("password:", password)
 
-
+##
 def signup():
     username = input("enter a username:").strip()
     
@@ -47,7 +47,7 @@ print("signup successful")
 print("username:", username)
 print("password:", password)
 
-
+##
 users = {}# users = {} creates a dictionary to store username-password pairs
 def signup():
     username = input("Enter a username: ").strip()
@@ -74,6 +74,42 @@ if username and password:
     print("Password:", password)
     print("all users:", users)  # Display all users for verification
 
+##
+users = {}  # Dictionary to store username-password pairs
+def signup():
+    username = input("enter a username:").strip()
+    if username in users: # Check if the username already exists
+        print("Username already exists. Please choose another one.")
+        return None, None 
+    while True:
+        password = input("enter a password:").strip()
+        if len(password) < 5:
+            print("Password too short, minimum 5 chars")
+            continue
+        confirm_password = input("confirm your password:").strip()
+        if password != confirm_password:
+            print("Password did not match. Please try again.")
+        else:
+            break
+        
+        users[username] = password  # Store the username and password in the dictionary
+    return username, password
+def login():
+    username = input("enter your username:").strip()
+    password = input("enter your password:").strip()
+    
+    if users.get(username) == password:
+        print("Login successful!")
+    else:
+        print("Login failed. Incorrect username or password.")
+username, password = signup()
+if username and password:  # Only print signup info if both values are valid
+    print("Signup successful")
+    print("Username:", username)
+    print("Password:", password)
+    print("All users:", users)  # Display all users for verification
+login()# Call the login function directly after signup
+##
 
 
 
