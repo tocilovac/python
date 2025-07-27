@@ -26,5 +26,27 @@ print("username:", username)
 print("password:", password)
 
 
+def signup():
+    username = input("enter a username:").strip()
+    
+    while True:
+        password = input("enter a password:").strip()
+        if len(password) < 5:
+            print("password too short, minimum 5 chars")
+            continue
+    
+        confirm_password = input("confirm your password:").strip()
+        if password != confirm_password:
+            print("password did not match.please try again.")
+        else:
+            break
+    
+    return username, password
+username, password = signup()
+print("signup successful")
+print("username:", username)
+print("password:", password)
+    
+
 
 
