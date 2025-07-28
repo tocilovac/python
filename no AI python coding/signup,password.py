@@ -130,7 +130,7 @@ def signup():
         else:
             break  # Exit loop once password checks are successful
     
-    users[username] = password  # ✅ Save the user after password confirmation
+    users[username] = password  #  Save the user after password confirmation
     return username, password
 
 def login():
@@ -162,7 +162,7 @@ while True:
         login()
     elif choice == "3":
         print("goodbye!")
-        break  # 🔚 Exit the loop gracefully
+        break  
     else:
         print("invalid choice. please enter 1, 2, or 3.")
 ##
