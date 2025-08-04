@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "test one",
+            "database": "1"
+        }
+    ],
+    "sqltools.useNodeRuntime": true,
+    "dataworkspace.excludedProjects": [
+        "a/a.sqlproj"
+    ]
+}

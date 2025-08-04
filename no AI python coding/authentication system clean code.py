@@ -55,3 +55,5 @@ def main():
             
 if __name__ == "__main__":
     main()
+# authentication system clean code.py
+# This code implements a simple authentication system with signup and login functionalities.
